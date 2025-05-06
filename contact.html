@@ -1,0 +1,191 @@
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Alhanamo Property</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+<!--
+*Title: Google Fonts
+*Author: Multiple Designers
+*Date: 2021
+*Availability: https://fonts.google.com/specimen/El+Messiri?preview.text_type=custom#about
+-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500&display=swap" rel="stylesheet">
+<!--
+*Title: Google Fonts
+*Author: Christian Robertson
+*Date: 2021
+*Availability: https://fonts.google.com/specimen/Roboto#standard-styles
+-->    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+<!--
+*Title: Bootstrap Font Awesome
+*Author: bootstrapcdn.com
+*Date: 2021
+*Availability: https://www.bootstrapcdn.com/fontawesome/
+-->
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+        
+        <section id="sub-header">
+            <nav>
+<!--
+*Title: Logo Maker
+*Author: freelogoservices.com
+*Date: 2021
+*Availability: https://www.freelogoservices.com/
+-->                
+                <a href="index.html"><img src="image/logo4.png"></a>
+                <div class="nav-bar" id="navBar">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <h1>Contact Us</h1>
+        </section>
+<!--
+*Title: Menu Button
+*Author: flaticon.com
+*Date: 2021
+*Availability: https://www.flaticon.com/free-icon/menu-button-of-three-horizontal-lines_56763
+*I tried to make a manual button that on click, it turns into a cross but that was giving me problems so decided to go with an image which I had used previously.
+-->
+        <div id= "menuBtn">
+            <img src="image/menu.png" id="menu">
+        </div>
+<!-----Contact Us Content--->
+        
+    <!--Registeration form-->
+       <div class="registeration-form">
+        <h1>Register Now!<span></span></h1>
+           
+        <form method="POST" id="signup_form" action="register.php">
+            <div class="error-message" id="error-message"></div>
+            <div class="inner-wrap">
+                <!--First Name-->
+                <label>First Name<input type="text" name="fname" id="fname" placeholder="Enter Your First Name"></label>
+                <div class="alert" id="fname_err"></div>
+                <!--Last Name-->
+                <label>Last Name<input type="text" name="lname" id="lname" placeholder="Enter Your Last Name"></label>
+                <div class="alert" id="lname_err"></div>
+                <!--Username-->
+                <label>Username<input type="text" name="username" id="username" placeholder="Enter A Username"></label>
+                <div class="alert" id="username_err"></div>
+                <!--Email Address-->
+                <label>Email Address<input type="email" name="email" id="email" placeholder="Enter Your Email"></label>
+                <div class="alert" id="email_err"></div>
+                <!--Phone Number-->
+                <label>Phone Number<input type="text" name="phone" id="phone" placeholder="Enter Your Phone Number"></label>
+                <div class="alert" id="phone_err"></div>
+                <!--Password-->
+                <label>Password<input type="password" name="pass" id="pass" placeholder="Enter A Password"></label>
+                <div class="alert" id="pass_err"></div>
+                <!--Confirm Password-->
+                <label>Confirm Password<input type="password" name="cpass" id="cpass" placeholder="Confirm Password"></label>
+                <div class="alert" id="cpass_err"></div>
+            </div>
+            <!--Sign Up Button-->
+            <div class="button-section">
+                <input type="submit" name="signup" value="Sign Up">
+            </div>
+        </form>
+    </div>
+
+    <!----- login form ------>
+    <div class="registeration-form">
+        <h1>Login<span></span></h1>
+        <form method="POST" id="login_form" action="login.php">
+            <div class="error-message" id="error-message"></div>
+            <div class="inner-wrap">
+                <!--Username-->
+                <label>Username <input type="text" name="username" id="l_username" placeholder="Enter Your Username"></label>
+                <div class="alert" id="l_username_err"></div>
+                <!--Password-->
+                <label>Password <input type="password" name="pass" id="l_pass" placeholder="Enter Your Password"></label>
+                <div class="alert" id="l_pass_err"></div>
+            </div>
+            <!--Login Button-->
+            <div class="button-section">
+                <input type="submit" name="login" value="Login">
+            </div>
+        </form>
+    </div>
+        <!--opening times and get in touch-->
+        <section class="contact-us">
+            <!--this section is the Get In Touch(Address, Email and Contact Number) and the Opening Times where they are positioned opposite each other.-->
+            <div class="info-row">
+            <div class="git-left">
+                <h1>GET IN TOUCH</h1>
+                <p>Address: 21 Knightsbridge Road, London, SW12 8AT</p>
+                <p>Email: info@alhanamoproperty.com</p>
+                <p>Telephone: 02083126725</p>
+            </div>
+            <div class="op-right">
+                <h1>OPENING HOURS</h1>
+                <p>Monday: 9am to 5pm</p>
+                <p>Tuesday: 9am to 5pm</p>
+                <p>Wednesday: 9am to 5pm</p>
+                <p>Thursday: 9am to 5pm</p>
+                <p>Friday: 9am to 2pm</p>
+            
+            </div>
+            </div>
+        </section>
+        
+<!--------Footer-------->
+         <section class="disclaimer">
+             <h4>DISCLAIMER</h4>
+             <p>Alhanamo Property is a fictitious brand created solely for the purpose of the assessment of IN1010 module at City, University of London, UK. All products and people associated with 
+                Alhanamo Property are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+        </section>
+        
+        <section class="socials">
+            <div class="icons">
+                <a href="https://en-gb.facebook.com//"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com//"><i class="fa fa-instagram"></i></a>
+                <a href="https://twitter.com/?lang=en-gb/"><i class="fa fa-twitter"></i></a>
+            </div>
+            <p>Copyright © 2020 Alhanamo</p>
+        </section>
+        
+        <script>
+            var menuBtn = document.getElementById("menuBtn")
+            var navBar = document.getElementById("navBar")
+            var menu = document.getElementById("menu")
+            
+            navBar.style.right = "-180px";
+        
+            menuBtn.onclick = function(){
+                if(navBar.style.right == "-180px"){
+                    navBar.style.right = "0";
+            }else{
+                navBar.style.right = "-180px";
+            }
+            }
+        </script>
+    
+    </body>
+
+<!--
+*Title: JQuery CDN
+*Author: W3Schools.com
+*Date: 2021
+*Availability: https://www.w3schools.com/jquery/jquery_get_started.asp
+-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+<!--javascript linking contact.html to form_validation.js--> 
+    <script src="form_validation.js"></script>
+</html>

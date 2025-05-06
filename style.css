@@ -1,0 +1,470 @@
+/*Including the font I wanted to use in making the website*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'El Messiri', sans-serif;
+}
+/*This is the hero image which cover the whole page. I have given it a linear gradient inspired from https://www.w3schools.com/css/css3_gradients.asp */
+#banner{
+    background: linear-gradient(rgba(0,0,0,0),#b463d4), url(image/background2.jpg);
+/*
+*Title: Background
+*Author: Binyamin Mellish
+*Date: 2016
+*Availability: https://www.pexels.com/photo/house-lights-turned-on-106399/
+*/
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+nav{
+    display: flex;
+    padding: 0.5%;
+    justify-content: space-between;
+    align-items: center;
+}
+/*This is for the width of the company logo*/
+nav img{
+    width: 175px;
+}
+/*This is for the slogan. Positioned in the center with a cornsilk being the colour. I used 125px as the padding top so that is is not too close to the top(menu btn and logo). */
+.slogan{
+  text-align: center;
+    color: cornsilk;
+    padding-top: 125px;
+}
+/*font size for the h1 and p of slogan*/
+.slogan h1{
+    font-size: 100px;
+}
+.slogan p{
+    font-size: 30px;
+    color: cornsilk;
+    font-style: italic;
+}
+/*putting a margin on the button so that it is not too close to the slogan h1 and p*/
+.slogan-btn{
+   margin: 30px auto 0;   
+}
+/*Positioning of the slogan-btn*/
+.slogan-btn a{
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    color: cornsilk;
+    border: 0.5px solid #fff;
+    position: relative;
+    z-index: 1;
+}
+/*Transition of the slogan-btn when hovered over. This was inspired from https://www.w3schools.com/howto/howto_css_transition_hover.asp*/
+.slogan-btn a span{
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #b463d4;
+    z-index: -1;
+    transition: 0.5s;
+}
+.slogan-btn a:hover span{
+    width: 100%;
+}
+/*This is for the side navBar. This is to: set the colour of the navBar, width of the navBar when open and closed,height of the navBar(100% to cover the whole page) and also the transition meaning that the opening and closing is smooth.*/
+#navBar{
+    width: 180px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -180px;
+    background: #b463d4;
+    z-index: 2;
+    transition: 0.5s;
+}
+/*Spacing out the different pages and aligning them to the center of the navBar. Also setting the colour of the text to cornsilk*/
+nav ul li{
+    list-style: none;
+    margin: 50px 20px;
+    text-align: center;
+}
+nav ul li a{
+   text-decoration: none;
+    color: cornsilk;
+}
+/*Positioning the menuBtn and having a background box with a colour*/
+#menuBtn{
+    width: 50px;
+    height: 50px;
+    background:#b463d4;
+    text-align: center;
+    position: fixed;
+    right: 15px;
+    top: 20px;
+    border-radius: 5px;
+    z-index: 3;
+    cursor: pointer;
+}
+#menuBtn img{
+    width: 30px;
+    margin-top: 10px;
+}
+/*Making the slogan h1, p and the button responsive by chnaging the font sizes.*/
+@media screen and (max-width: 480px){
+    .slogan h1{
+    font-size: 40px;
+}
+    .slogan p{
+    font-size: 17px;
+        
+}
+    .slogan-btn a{
+    display: block;
+    margin: 20px auto;
+    }
+}
+
+/*-------- Welcome ------*/
+
+/*Positioning the Welcome section in the centre. Having font sizes, colour and font-weight for h1 and p. */
+.welcome{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 75px;      
+}
+h1{
+    font-size: 40px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+/*Positioning of the welcome-column. Having three welcome columns means that flex-basis was needed to divide the columns equally and so that there's little gaps between each column. The columns have border-radius so that it gives the corners a rounder edge.*/
+.welcome-column{
+    flex-basis: 30%;
+    background: #e1bdf0;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+/*When the columns are hovered over, there are shadowasnaround the columns being displayed. This was inspired from https://www.w3schools.com/cssref/css3_pr_box-shadow.asp*/
+.welcome-column:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+/*Making the columns responsive by having the the rows change to a column.*/
+@media(max-width: 480px){
+    .row{
+        flex-direction: column;
+    }
+}
+/*-------Footer--------*/
+/*Positioning for the Disclaimer section. Font sizes for the h4 and positioning color(cornsilk) of social media icons and copyright copyright. Also, the strip of colour going at the bottom of the pages with the socials media icons and the copyright positioned at the center.*/
+.disclaimer{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 60px;
+}
+.disclaimer h4{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+.socials{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background: #b463d4
+}
+.socials p{
+    color: cornsilk;
+}
+.icons .fa{
+    margin: 0 20px;
+    cursor: pointer;
+    padding: 15px 0;
+    color: cornsilk;
+}
+@media(max-width: 600px){
+    .disclaimer{
+        font-size: 15px;
+    }
+    .disclaimer h4{
+        font-size:
+    }
+    .disclaimer p{
+        font-size: 12px;
+    }
+}
+/*-----Picture at the top of pages(banner)-----*/
+
+/*Positioning of the sub-banner on other pages. Gave the images a linear gradient same as the hero image on the index.html. Height of the image being shorter than that of the home page.*/
+#sub-header{
+    height: 45%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0),#b463d4),url(image/main.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: cornsilk;
+}
+#sub-header h1{
+    margin-top: 100px;
+}
+/*--------About Us Page--------*/
+
+/*Positioning the paragraphs so that they are side by side*/
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 50px;    
+}
+
+.about-column h2{
+    text-align: center;
+}
+.about-column{
+    text-align:justify;
+    flex-basis: 45%;
+    padding: 30px 2px;
+}
+/*Width of the slider to be 600px.*/
+    .bx-wrapper {
+      max-width: 600px !important
+    }
+/*Making the page responsive. The max width for About Us page is 800px because when used on half the monitor it was not looking very professional when max width was set to 480px.However, it still responsive to small devices of screen smaller than 480px. */
+    @media screen and (max-width: 800px) {
+      .about-us {
+        display: block !important;
+        font-size: 17px;
+      }
+        .about-us p{
+            font-size: 17px;
+        }
+    .col,
+    .bx-wrapper {
+      width: 50%;
+    }
+    }
+
+    .col,
+    .bx-wrapper {
+      width: 100%;
+    }
+
+    .about-us {
+    margin-top: 50px;
+    display: flex;
+    align-items: flex-start;
+  /* flex-direction: column  */
+ }
+
+/*--Branches--*/
+/*Positioning of the branches were similar to the welcome-column on the hoe page. Difference being that branch-column contains images rather than text. Similar positioning and layout. A feature I included here is the faded colour when the image is hovered over. This was inspired from https://www.w3schools.com/howto/howto_css_image_overlay.asp*/
+.branches{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 45px; 
+}
+h1{
+    font-size: 40px;
+    font-weight: 600;
+}
+.branch-column{
+    flex-basis: 30%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.branch-column img{
+    width: 100%
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(225, 189, 240,0.5);
+}
+/*-----Contact Us Page-----*/
+
+/*form validation*/
+/*Styled this form using the help of the Week 6 Lab tutorial as well as some youtube videos like https://www.youtube.com/watch?v=rsd4FNGTRBw. The CSS code was changed to suit my requirements for the contact page.*/
+body {
+    background: white;
+} 
+.registeration-form {        
+    max-width: 450px;
+    padding: 30px;
+    margin: 40px auto;
+    background: #FFF;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+    
+}
+.registeration-form .inner-wrap {
+    padding: 30px;
+    background: #F8F8F8;
+    border-radius: 6px;
+    margin-bottom: 15px; 
+}
+.registeration-form h1 {
+    background: #b463d4;
+    padding: 20px 30px 15px 30px;
+    margin: -30px -30px 30px -30px;
+    border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    color: cornsilk;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+    font: 30px 'El Messiri', sans-serif;
+    -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    border: 1px solid #a548ca;
+} 
+.registeration-form h1 span {
+    display: block;
+    margin-top: 2px;
+    font: 13px;
+}        
+.registeration-form label {
+    display: block;
+    font: 13px;
+    color: black;
+    margin-bottom: 15px;
+}
+        
+.registeration-form input[type="text"],
+.registeration-form input[type="email"],
+.registeration-form input[type="password"]{
+    display: block;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border: 2px solid #fff;
+ 
+}
+
+.registeration-form input[type="button"],
+.registeration-form input[type="submit"] {
+    background: #b463d4;
+    padding: 8px 20px 8px 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: cornsilk;
+    font: 30px 'El Messiri', sans-serif;
+    border: 1px solid #a548ca;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/*opening hours and get in touch section*/
+/*Styling the Get In Touch(git) and the Opening Hours(op) to be in opposite sides; git being on the right and op being on the left.*/
+.contact-us{
+    padding: 100px 0px 20px;
+    position: relative;
+}
+.info-row{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.git-left,.op-right{
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom 20px;
+} 
+.op-right{
+    text-align: right;
+}
+.op-right p{
+    padding-top: 1px;
+    padding-right: 0;
+    font-size: 15px
+}
+.git-left p{
+    padding-top: 1px;
+    padding-left: 0;
+    font-size: 15px;
+}
+.op-right h1{
+    font-size: 18px;
+}
+.git-left h1{
+    font-size: 18px
+}
+/*Making the git and op responsive by turning them into a column instead*/
+@media screen and (max-width: 480px){
+    .git-left,.op-right{
+        flex-basis: 100%;
+    }
+}
+/*This is for when information entered into the form is incorrect of does not match the requirement. I also, changed the font of the alert . Alert will show up in a red colour.*/
+.alert {
+    color: #fd2a3d;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: none;
+    font-family: 'Roboto', sans-serif;
+}
+/*----Welcome.php-----*/
+/*This section is to make the welcome page for when the customer logs in. The are greeted with a 'Welcome (Username)'. The styling for this section is to make the background image fit the entire screen with the h1 at the bottom of the screen. I have given the image a linear gradient similar to that of the home page.*/
+#log-header{
+    background: linear-gradient(rgba(0,0,0,0),#b463d4), url(image/main.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+.welcome-text h1{
+    font-size:  100px;
+    text-align: center;
+    margin-top: 480px;
+    color: cornsilk;
+}
+/*Making the font size for h1 on the welcome.php page responsive*/
+@media screen and (max-width: 480px){
+    .welcome-text h1{
+        font-size: 40px;
+    }
+}
+
+
+
+
+
+    
